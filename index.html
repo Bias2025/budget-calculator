@@ -166,6 +166,13 @@
 
     /* DISCLOSURE */
     .disclosure { font-size: 10px; color: rgba(255,255,255,0.3); text-align: center; padding: 0 1.25rem 1rem; line-height: 1.5; }
+    .matchday-link { display: flex; align-items: center; gap: 12px; width: calc(100% - 2.5rem); margin: 0 1.25rem 0.75rem; padding: 12px 14px; background: rgba(240,165,0,0.1); border: 1px solid rgba(240,165,0,0.28); border-radius: var(--radius-md); text-decoration: none; transition: all 0.15s; }
+    .matchday-link:hover { background: rgba(240,165,0,0.18); border-color: rgba(240,165,0,0.5); }
+    .md-link-icon { font-size: 22px; flex-shrink: 0; }
+    .md-link-text { flex: 1; }
+    .md-link-title { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--wc-gold); }
+    .md-link-sub { font-size: 10px; color: rgba(255,255,255,0.45); margin-top: 2px; }
+    .md-link-arrow { font-size: 16px; color: var(--wc-gold); opacity: 0.7; flex-shrink: 0; }
 
     /* PRO TIP */
     .pro-tip { padding: 11px 13px; background: var(--surface-alt); border-radius: var(--radius-md); border-left: 3px solid var(--wc-gold); margin-bottom: 1rem; }
@@ -481,6 +488,15 @@
       <button class="share-btn" id="share-btn">
         <i class="ti ti-photo-share"></i> Download My Budget Card
       </button>
+
+      <a href="/matchday.html" class="matchday-link">
+        <span class="md-link-icon">⚽</span>
+        <div class="md-link-text">
+          <div class="md-link-title">Match Day Guide</div>
+          <div class="md-link-sub">Gates · Transport · What's banned · After the match</div>
+        </div>
+        <span class="md-link-arrow">→</span>
+      </a>
 
       <div class="disclosure">
         Links may earn a commission at no extra cost to you. Prices are estimates only.
