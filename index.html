@@ -479,7 +479,7 @@
       </div>
 
       <button class="share-btn" id="share-btn">
-        <i class="ti ti-share"></i> Copy My Budget Summary
+        <i class="ti ti-photo-share"></i> Download My Budget Card
       </button>
 
       <div class="disclosure">
@@ -632,7 +632,8 @@
     return {us_domestic:'US',canada:'Canada',mexico:'Mexico',uk_europe:'UK/EU',south_america:'S. America',africa:'Africa',middle_east:'Middle East',asia_pacific:'Asia/Pacific'}[o]||o;
   }
 
-  document.getElementById('share-btn').addEventListener('click', () => {
+  // ── CANVAS SHARE CARD ────────────────────────────────────────────
+  function generateCard() {
     const origin = document.getElementById('origin').options[document.getElementById('origin').selectedIndex].text;
     const party  = document.getElementById('party').value;
     const days   = daysSlider.value;
@@ -641,27 +642,191 @@
     const best   = document.getElementById('best-case').textContent;
     const worst  = document.getElementById('worst-case').textContent;
     const match  = document.getElementById('match-grid').querySelector('.active .mb-name').textContent;
+    const partyTotal = party > 1 ? 'Total for ' + party + ' people: $' + Math.round(parseInt(document.getElementById('total-amount').textContent.replace(/,/g,'')) * parseInt(party)).toLocaleString('en-US') : '';
 
-    const text = [
-      '🏆 My FIFA World Cup 2026 Budget',
-      '━━━━━━━━━━━━━━━━━━━━━━━',
-      'From: ' + origin,
-      'Party: ' + party + ' person(s) · ' + days + ' days',
-      'Cities: ' + cities,
-      'Match plan: ' + match,
-      '━━━━━━━━━━━━━━━━━━━━━━━',
-      '💰 Per person: ' + total,
-      '✅ Best case: ' + best + '/person',
-      '⚠️  Budget for: ' + worst + '/person',
-      '━━━━━━━━━━━━━━━━━━━━━━━',
-      '🔗 worldcup2026budget.com'
-    ].join('\n');
+    const W = 800, H = 460;
+    const cv = document.createElement('canvas');
+    cv.width = W; cv.height = H;
+    const ctx = cv.getContext('2d');
 
-    navigator.clipboard.writeText(text).then(() => {
-      const toast = document.getElementById('toast');
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2400);
-    }).catch(() => alert(text));
+    const NAVY = '#00205B', RED = '#C8102E', GOLD = '#D4A017';
+    const WHITE = '#FFFFFF', MUTED = 'rgba(255,255,255,0.42)';
+
+    function rr(x, y, w, h, r, fill, stroke, sw) {
+      ctx.beginPath();
+      ctx.moveTo(x+r,y); ctx.lineTo(x+w-r,y);
+      ctx.arcTo(x+w,y,x+w,y+r,r); ctx.lineTo(x+w,y+h-r);
+      ctx.arcTo(x+w,y+h,x+w-r,y+h,r); ctx.lineTo(x+r,y+h);
+      ctx.arcTo(x,y+h,x,y+h-r,r); ctx.lineTo(x,y+r);
+      ctx.arcTo(x,y,x+r,y,r); ctx.closePath();
+      if(fill){ctx.fillStyle=fill;ctx.fill();}
+      if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=sw||1.5;ctx.stroke();}
+    }
+
+    // Background
+    ctx.fillStyle = NAVY; ctx.fillRect(0,0,W,H);
+
+    // Decorative circles
+    ctx.fillStyle='rgba(200,16,46,0.18)';
+    ctx.beginPath();ctx.arc(W-70,-50,180,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='rgba(212,160,23,0.11)';
+    ctx.beginPath();ctx.arc(50,H+30,130,0,Math.PI*2);ctx.fill();
+
+    // Left accent stripes
+    ctx.fillStyle=RED; ctx.fillRect(0,0,6,H);
+    ctx.fillStyle=GOLD; ctx.fillRect(6,0,3,H);
+
+    // BADGE
+    rr(26,22,128,24,3,RED,null);
+    ctx.fillStyle=WHITE; ctx.font='bold 10px Arial';
+    ctx.fillText('FIFA WORLD CUP 2026',36,38);
+
+    // TITLE
+    ctx.fillStyle=WHITE; ctx.font='bold 52px Arial';
+    ctx.fillText('MY WORLD CUP',26,96);
+    ctx.fillStyle=GOLD; ctx.font='bold 52px Arial';
+    ctx.fillText('BUDGET',26,148);
+
+    // Divider
+    ctx.strokeStyle='rgba(255,255,255,0.14)';ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(26,162);ctx.lineTo(W-26,162);ctx.stroke();
+
+    // INFO CHIPS — 4 across
+    const infoItems = [
+      {label:'FROM', val: origin.length>18?origin.substring(0,16)+'…':origin},
+      {label:'PARTY', val: party+' people · '+days+'d'},
+      {label:'CITIES', val: cities.length>20?cities.substring(0,18)+'…':cities},
+      {label:'MATCHES', val: match.length>18?match.substring(0,16)+'…':match},
+    ];
+    infoItems.forEach((item,i)=>{
+      const ix=26+i*188, iw=177;
+      rr(ix,172,iw,52,6,'rgba(255,255,255,0.07)',null);
+      ctx.fillStyle=MUTED; ctx.font='bold 9px Arial';
+      ctx.fillText(item.label,ix+10,190);
+      ctx.fillStyle=WHITE; ctx.font='600 13px Arial';
+      ctx.fillText(item.val,ix+10,210);
+    });
+
+    // Divider
+    ctx.strokeStyle='rgba(255,255,255,0.12)';ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(26,238);ctx.lineTo(W-26,238);ctx.stroke();
+
+    // MAIN COST
+    ctx.fillStyle=MUTED; ctx.font='bold 11px Arial';
+    ctx.fillText('ESTIMATED COST PER PERSON',26,262);
+    ctx.fillStyle=GOLD; ctx.font='bold 62px Arial';
+    ctx.fillText(total,26,326);
+    if(partyTotal){
+      ctx.fillStyle='rgba(255,255,255,0.45)'; ctx.font='13px Arial';
+      ctx.fillText(partyTotal,26,346);
+    }
+
+    // SCENARIO BOXES
+    rr(390,250,182,84,8,'rgba(0,155,58,0.22)','rgba(0,200,80,0.28)',1);
+    ctx.fillStyle=MUTED; ctx.font='bold 9px Arial';
+    ctx.fillText('BEST CASE',404,270);
+    ctx.fillStyle=WHITE; ctx.font='bold 30px Arial';
+    ctx.fillText(best,404,304);
+    ctx.fillStyle='rgba(255,255,255,0.38)'; ctx.font='11px Arial';
+    ctx.fillText('Everything goes right',404,322);
+
+    rr(584,250,192,84,8,'rgba(200,16,46,0.22)','rgba(200,16,46,0.32)',1);
+    ctx.fillStyle=MUTED; ctx.font='bold 9px Arial';
+    ctx.fillText('BUDGET FOR',598,270);
+    ctx.fillStyle=WHITE; ctx.font='bold 30px Arial';
+    ctx.fillText(worst,598,304);
+    ctx.fillStyle='rgba(255,255,255,0.38)'; ctx.font='11px Arial';
+    ctx.fillText("Don't get caught short",598,322);
+
+    // COST BAR
+    const cats=[
+      {label:'Tickets',pct:0.12,color:RED},
+      {label:'Flights',pct:0.20,color:GOLD},
+      {label:'Hotels',pct:0.48,color:'#3a7bd5'},
+      {label:'Food',pct:0.12,color:'#1a9e5c'},
+      {label:'Other',pct:0.08,color:'#9b59b6'},
+    ];
+    const bx=26,by=362,bw=W-52,bh=14;
+    rr(bx,by,bw,bh,7,'rgba(255,255,255,0.08)',null);
+    let cx2=bx;
+    cats.forEach((cat,i)=>{
+      const cw=bw*cat.pct;
+      ctx.fillStyle=cat.color;
+      if(i===0){
+        ctx.beginPath();
+        ctx.moveTo(cx2+7,by);ctx.lineTo(cx2+cw,by);ctx.lineTo(cx2+cw,by+bh);ctx.lineTo(cx2+7,by+bh);
+        ctx.arcTo(cx2,by+bh,cx2,by+bh-7,7);ctx.lineTo(cx2,by+7);ctx.arcTo(cx2,by,cx2+7,by,7);
+        ctx.closePath();ctx.fill();
+      } else if(i===cats.length-1){
+        ctx.beginPath();
+        ctx.moveTo(cx2,by);ctx.lineTo(cx2+cw-7,by);ctx.arcTo(cx2+cw,by,cx2+cw,by+7,7);
+        ctx.lineTo(cx2+cw,by+bh-7);ctx.arcTo(cx2+cw,by+bh,cx2+cw-7,by+bh,7);ctx.lineTo(cx2,by+bh);
+        ctx.closePath();ctx.fill();
+      } else {
+        ctx.fillRect(cx2,by,cw,bh);
+      }
+      cx2+=cw;
+    });
+
+    // Legend
+    let lx=26;
+    cats.forEach(cat=>{
+      rr(lx,386,10,10,2,cat.color,null);
+      ctx.fillStyle='rgba(255,255,255,0.55)'; ctx.font='11px Arial';
+      ctx.fillText(cat.label,lx+14,395);
+      lx+=ctx.measureText(cat.label).width+30;
+    });
+
+    // Footer divider
+    ctx.strokeStyle='rgba(255,255,255,0.1)';ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(26,412);ctx.lineTo(W-26,412);ctx.stroke();
+
+    // URL watermark
+    ctx.fillStyle=GOLD; ctx.font='bold 13px Arial';
+    ctx.fillText('worldcup2026budget.com',26,437);
+    const tagline='Calculate yours free — June 11 to July 19, 2026';
+    ctx.fillStyle='rgba(255,255,255,0.28)'; ctx.font='11px Arial';
+    ctx.fillText(tagline, W-26-ctx.measureText(tagline).width, 437);
+
+    return cv;
+  }
+
+  document.getElementById('share-btn').addEventListener('click', () => {
+    const cv = generateCard();
+
+    // Show modal preview
+    const overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.82);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;';
+
+    const img = document.createElement('img');
+    img.src = cv.toDataURL('image/png');
+    img.style.cssText = 'max-width:100%;max-height:70vh;border-radius:12px;display:block;';
+
+    const btnRow = document.createElement('div');
+    btnRow.style.cssText = 'display:flex;gap:10px;flex-wrap:wrap;justify-content:center;';
+
+    const dlBtn = document.createElement('a');
+    dlBtn.href = cv.toDataURL('image/png');
+    dlBtn.download = 'my-worldcup-2026-budget.png';
+    dlBtn.style.cssText = 'display:inline-flex;align-items:center;gap:8px;background:#C8102E;color:#fff;padding:12px 22px;border-radius:8px;font-family:Arial,sans-serif;font-size:14px;font-weight:700;text-decoration:none;letter-spacing:0.5px;';
+    dlBtn.innerHTML = '&#8659; Download Card';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = 'Close';
+    closeBtn.style.cssText = 'display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);color:#fff;padding:12px 22px;border-radius:8px;font-family:Arial,sans-serif;font-size:14px;font-weight:700;border:1px solid rgba(255,255,255,0.2);cursor:pointer;';
+    closeBtn.onclick = () => document.body.removeChild(overlay);
+
+    const hint = document.createElement('p');
+    hint.textContent = 'Save the card and share on Twitter, Instagram, or WhatsApp';
+    hint.style.cssText = 'color:rgba(255,255,255,0.45);font-size:12px;font-family:Arial,sans-serif;text-align:center;margin:0;';
+
+    btnRow.appendChild(dlBtn);
+    btnRow.appendChild(closeBtn);
+    overlay.appendChild(img);
+    overlay.appendChild(btnRow);
+    overlay.appendChild(hint);
+    overlay.addEventListener('click', e => { if(e.target===overlay) document.body.removeChild(overlay); });
+    document.body.appendChild(overlay);
   });
 
   calculate();
