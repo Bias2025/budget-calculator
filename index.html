@@ -3,121 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FIFA World Cup 2026 — Trip Budget Calculator</title>
   <meta name="impact-site-verification" content="c58f37bd-543a-4055-851d-449a6a5e46c9">
   <meta name="description" content="Find out what attending the 2026 FIFA World Cup will really cost. Calculate flights, hotels, tickets, and more across 16 host cities.">
+  <title>FIFA World Cup 2026 — Trip Budget Calculator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1">
+  (function () {
+      var script = document.createElement("script");
+      script.async = 1;
+      script.src = 'https://emrldtp.com/NTM0OTk1.js?t=534995';
+      document.head.appendChild(script);
+  })();
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --wc-red: #C8102E;
-      --wc-navy: #00205B;
-      --wc-gold: #D4A017;
-      --bg: #f2f2ee;
-      --surface: #ffffff;
-      --surface-alt: #f7f7f3;
-      --border: rgba(0,0,0,0.09);
-      --border-em: rgba(0,0,0,0.16);
-      --text-primary: #0d0d0d;
-      --text-secondary: #555550;
-      --text-hint: #999990;
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --radius-lg: 14px;
+      --wc-red: #C8102E; --wc-navy: #00205B; --wc-gold: #D4A017;
+      --bg: #f2f2ee; --surface: #ffffff; --surface-alt: #f7f7f3;
+      --border: rgba(0,0,0,0.09); --border-em: rgba(0,0,0,0.16);
+      --text-primary: #0d0d0d; --text-secondary: #555550; --text-hint: #999990;
+      --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px;
     }
-
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #0e0e10;
-        --surface: #1a1a1e;
-        --surface-alt: #222228;
-        --border: rgba(255,255,255,0.08);
-        --border-em: rgba(255,255,255,0.16);
-        --text-primary: #f0f0ec;
-        --text-secondary: #a0a09a;
-        --text-hint: #606058;
+        --bg: #0e0e10; --surface: #1a1a1e; --surface-alt: #222228;
+        --border: rgba(255,255,255,0.08); --border-em: rgba(255,255,255,0.16);
+        --text-primary: #f0f0ec; --text-secondary: #a0a09a; --text-hint: #606058;
       }
     }
-
     html { scroll-behavior: smooth; }
     body { font-family: 'Barlow', sans-serif; background: var(--bg); color: var(--text-primary); min-height: 100vh; }
 
     /* HERO */
-    .hero {
-      background: var(--wc-navy);
-      padding: 2.5rem 2rem 2rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: ''; position: absolute; top: -60px; right: -60px;
-      width: 280px; height: 280px; border-radius: 50%;
-      background: rgba(200,16,46,0.22);
-    }
-    .hero::after {
-      content: ''; position: absolute; bottom: -50px; left: 80px;
-      width: 160px; height: 160px; border-radius: 50%;
-      background: rgba(212,160,23,0.14);
-    }
+    .hero { background: var(--wc-navy); padding: 2.5rem 2rem 2rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 280px; height: 280px; border-radius: 50%; background: rgba(200,16,46,0.22); }
+    .hero::after { content: ''; position: absolute; bottom: -50px; left: 80px; width: 160px; height: 160px; border-radius: 50%; background: rgba(212,160,23,0.14); }
     .hero-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--wc-red); color: #fff;
-      font-family: 'Barlow Condensed', sans-serif; font-size: 11px;
-      font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase;
-      padding: 4px 11px; border-radius: 3px; margin-bottom: 12px;
-    }
-    .hero h1 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(36px, 6vw, 58px); font-weight: 900;
-      color: #fff; line-height: 0.95; text-transform: uppercase; margin-bottom: 10px;
-    }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 6px; background: var(--wc-red); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; padding: 4px 11px; border-radius: 3px; margin-bottom: 12px; }
+    .hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(36px, 6vw, 58px); font-weight: 900; color: #fff; line-height: 0.95; text-transform: uppercase; margin-bottom: 10px; }
     .hero h1 span { color: var(--wc-gold); }
-    .hero-sub {
-      font-size: 13px; color: rgba(255,255,255,0.5);
-      display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
-    }
+    .hero-sub { font-size: 13px; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
     .hero-sub span { display: flex; align-items: center; gap: 5px; }
 
+    /* ESIM BANNER */
+    .esim-banner { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid var(--wc-gold); padding: 0.75rem 2rem; }
+    .esim-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .esim-text { display: flex; align-items: center; gap: 10px; }
+    .esim-icon { font-size: 22px; color: var(--wc-gold); }
+    .esim-copy { font-size: 12px; color: rgba(255,255,255,0.85); }
+    .esim-copy strong { color: #fff; font-weight: 600; }
+    .esim-btn { display: inline-flex; align-items: center; gap: 6px; background: var(--wc-gold); color: #000; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 7px 14px; border-radius: var(--radius-sm); text-decoration: none; white-space: nowrap; transition: opacity 0.15s; }
+    .esim-btn:hover { opacity: 0.88; }
+
     /* LAYOUT */
-    .page-body {
-      max-width: 860px; margin: 0 auto; padding: 1.75rem 1.5rem;
-      display: grid; grid-template-columns: 1fr 360px;
-      gap: 1.5rem; align-items: start;
-    }
-    @media (max-width: 720px) {
-      .page-body { grid-template-columns: 1fr; padding: 1.25rem 1rem; }
-      .results-card { position: static !important; }
-    }
+    .page-body { max-width: 860px; margin: 0 auto; padding: 1.75rem 1.5rem; display: grid; grid-template-columns: 1fr 360px; gap: 1.5rem; align-items: start; }
+    @media (max-width: 720px) { .page-body { grid-template-columns: 1fr; padding: 1.25rem 1rem; } .results-card { position: static !important; } }
 
     /* CARD */
     .card { background: var(--surface); border-radius: var(--radius-lg); border: 0.5px solid var(--border); overflow: hidden; margin-bottom: 1rem; }
     .card:last-child { margin-bottom: 0; }
     .card-header { padding: 0.875rem 1.25rem; border-bottom: 0.5px solid var(--border); }
-    .card-header h2 {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 12px;
-      font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-      color: var(--text-secondary); display: flex; align-items: center; gap: 6px;
-    }
+    .card-header h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; }
     .card-body { padding: 1.25rem; }
 
     /* FORM */
     .field-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 1rem; }
     .field-group:last-child { margin-bottom: 0; }
     .field-label { font-size: 12px; font-weight: 500; color: var(--text-secondary); }
-    select {
-      height: 38px; padding: 0 28px 0 10px;
-      border: 0.5px solid var(--border-em); border-radius: var(--radius-sm);
-      background: var(--surface-alt); color: var(--text-primary);
-      font-family: 'Barlow', sans-serif; font-size: 13px; width: 100%;
-      appearance: none; -webkit-appearance: none; cursor: pointer;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 10px center;
-    }
+    select { height: 38px; padding: 0 28px 0 10px; border: 0.5px solid var(--border-em); border-radius: var(--radius-sm); background: var(--surface-alt); color: var(--text-primary); font-family: 'Barlow', sans-serif; font-size: 13px; width: 100%; appearance: none; -webkit-appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
     /* RANGE */
@@ -126,40 +82,19 @@
     .range-header { display: flex; justify-content: space-between; align-items: baseline; }
     .range-header .r-label { font-size: 12px; font-weight: 500; color: var(--text-secondary); }
     .range-val { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 800; color: var(--text-primary); }
-    input[type="range"] {
-      -webkit-appearance: none; appearance: none;
-      width: 100%; height: 4px; border-radius: 2px;
-      background: var(--border-em); outline: none; cursor: pointer;
-    }
-    input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none; appearance: none;
-      width: 18px; height: 18px; border-radius: 50%;
-      background: var(--wc-navy); border: 2px solid #fff;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.25); cursor: pointer;
-    }
-    input[type="range"]::-moz-range-thumb {
-      width: 18px; height: 18px; border-radius: 50%;
-      background: var(--wc-navy); border: 2px solid #fff; cursor: pointer;
-    }
+    input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: var(--border-em); outline: none; cursor: pointer; }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--wc-navy); border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.25); cursor: pointer; }
+    input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: var(--wc-navy); border: 2px solid #fff; cursor: pointer; }
 
     /* CHIPS */
     .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-    .chip {
-      font-size: 11px; font-weight: 500; padding: 5px 11px;
-      border-radius: 20px; border: 0.5px solid var(--border-em);
-      background: var(--surface-alt); color: var(--text-secondary);
-      cursor: pointer; user-select: none; transition: all 0.12s;
-    }
+    .chip { font-size: 11px; font-weight: 500; padding: 5px 11px; border-radius: 20px; border: 0.5px solid var(--border-em); background: var(--surface-alt); color: var(--text-secondary); cursor: pointer; user-select: none; transition: all 0.12s; }
     .chip:hover { border-color: var(--wc-navy); color: var(--wc-navy); }
     .chip.active { background: var(--wc-navy); color: #fff; border-color: var(--wc-navy); }
 
     /* MATCH BUTTONS */
     .match-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .match-btn {
-      border: 0.5px solid var(--border-em); border-radius: var(--radius-md);
-      background: var(--surface-alt); padding: 12px; cursor: pointer;
-      text-align: left; transition: all 0.12s; user-select: none;
-    }
+    .match-btn { border: 0.5px solid var(--border-em); border-radius: var(--radius-md); background: var(--surface-alt); padding: 12px; cursor: pointer; text-align: left; transition: all 0.12s; user-select: none; }
     .match-btn:hover { border-color: var(--wc-red); }
     .match-btn.active { border: 1.5px solid var(--wc-red); background: rgba(200,16,46,0.04); }
     .match-btn .mb-icon { font-size: 20px; color: var(--wc-red); display: block; margin-bottom: 5px; }
@@ -168,11 +103,7 @@
 
     /* TIER BUTTONS */
     .tier-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
-    .tier-btn {
-      border: 0.5px solid var(--border-em); border-radius: var(--radius-md);
-      background: var(--surface-alt); padding: 12px 8px;
-      cursor: pointer; text-align: center; transition: all 0.12s; user-select: none;
-    }
+    .tier-btn { border: 0.5px solid var(--border-em); border-radius: var(--radius-md); background: var(--surface-alt); padding: 12px 8px; cursor: pointer; text-align: center; transition: all 0.12s; user-select: none; }
     .tier-btn:hover { border-color: var(--wc-navy); }
     .tier-btn.active { border: 1.5px solid var(--wc-navy); background: rgba(0,32,91,0.05); }
     .tier-btn .t-icon { font-size: 22px; color: var(--wc-navy); display: block; margin-bottom: 4px; }
@@ -180,15 +111,9 @@
     .tier-btn .t-price { font-size: 10px; color: var(--text-secondary); display: block; margin-top: 2px; }
 
     /* RESULTS CARD */
-    .results-card {
-      background: var(--wc-navy); border-radius: var(--radius-lg);
-      overflow: hidden; position: sticky; top: 1.5rem;
-    }
+    .results-card { background: var(--wc-navy); border-radius: var(--radius-lg); overflow: hidden; position: sticky; top: 1.5rem; }
     .results-top { padding: 1.5rem 1.25rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
-    .r-eyebrow {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700;
-      letter-spacing: 1.8px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 4px;
-    }
+    .r-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
     .r-total { font-family: 'Barlow Condensed', sans-serif; font-size: 52px; font-weight: 900; color: #fff; line-height: 1; }
     .r-total .currency { font-size: 28px; vertical-align: top; margin-top: 6px; display: inline-block; color: var(--wc-gold); }
     .r-sub { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 4px; }
@@ -205,10 +130,7 @@
     .bi-cost { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #fff; min-width: 68px; text-align: right; }
 
     /* SCENARIOS */
-    .scenario-row {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-      padding: 0.875rem 1.25rem; border-top: 0.5px solid rgba(255,255,255,0.1);
-    }
+    .scenario-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0.875rem 1.25rem; border-top: 0.5px solid rgba(255,255,255,0.1); }
     .sc-card { border-radius: var(--radius-sm); padding: 10px 12px; }
     .sc-card.best { background: rgba(0,155,58,0.22); }
     .sc-card.worst { background: rgba(200,16,46,0.22); }
@@ -216,100 +138,48 @@
     .sc-amount { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800; color: #fff; }
     .sc-note { font-size: 10px; color: rgba(255,255,255,0.38); margin-top: 2px; }
 
-    /* AFFILIATE BUTTONS */
-    .aff-section {
-      padding: 0.875rem 1.25rem 1rem;
-      border-top: 0.5px solid rgba(255,255,255,0.1);
-    }
-    .aff-label {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700;
-      letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4);
-      margin-bottom: 8px;
-    }
-    .aff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 7px; }
-    .aff-btn {
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 3px; padding: 10px 6px;
-      border-radius: var(--radius-md); border: none;
-      font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 600;
-      cursor: pointer; text-decoration: none; transition: opacity 0.15s; line-height: 1.2;
-      text-align: center;
-    }
-    .aff-btn:hover { opacity: 0.88; }
+    /* AFF SECTION */
+    .aff-section { padding: 0.875rem 1.25rem 0.5rem; border-top: 0.5px solid rgba(255,255,255,0.1); }
+    .aff-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
+    .aff-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 6px; }
+    .aff-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 6px; }
+    .aff-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 9px 5px; border-radius: var(--radius-md); border: none; font-family: 'Barlow', sans-serif; font-size: 10.5px; font-weight: 600; cursor: pointer; text-decoration: none; transition: opacity 0.15s; text-align: center; line-height: 1.2; color: #fff; }
+    .aff-btn:hover { opacity: 0.85; }
     .aff-btn:active { transform: scale(0.97); }
-    .aff-btn i { font-size: 18px; margin-bottom: 1px; }
-    .aff-btn .aff-provider { font-size: 9px; font-weight: 400; opacity: 0.75; margin-top: 1px; }
-
-    .btn-skyscanner { background: #00A0DC; color: #fff; }
-    .btn-kayak      { background: #FF690F; color: #fff; }
-    .btn-booking    { background: #003580; color: #fff; }
-    .btn-hotels     { background: #D42B2B; color: #fff; }
-
-    .aff-btn-wide {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      width: 100%; padding: 11px;
-      border-radius: var(--radius-md); border: none;
-      font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
-      letter-spacing: 0.5px; text-transform: uppercase;
-      cursor: pointer; text-decoration: none; transition: opacity 0.15s;
-    }
+    .aff-btn i { font-size: 17px; margin-bottom: 1px; }
+    .aff-btn .aff-sub { font-size: 9px; font-weight: 400; opacity: 0.7; margin-top: 1px; }
+    .btn-aviasales   { background: #33A9DC; }
+    .btn-econbook    { background: #2B5EA7; }
+    .btn-kiwitaxi    { background: #FF6B00; }
+    .btn-welcomepick { background: #1DB954; }
+    .btn-rentacar    { background: #E63946; }
+    .btn-airhelp     { background: #7B2FBE; }
+    .btn-gocity      { background: #FF4500; }
+    .btn-ekta        { background: #0077B6; }
+    .aff-btn-wide { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 11px; border-radius: var(--radius-md); border: none; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: opacity 0.15s; margin-bottom: 6px; color: #000; }
     .aff-btn-wide:hover { opacity: 0.88; }
-    .btn-tickets-wide { background: var(--wc-gold); color: #000; margin-bottom: 7px; }
+    .btn-tickets-wide { background: var(--wc-gold); }
 
-    /* SHARE BUTTON */
-    .share-btn {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      width: calc(100% - 2.5rem); margin: 0 1.25rem 1rem;
-      padding: 11px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);
-      border: 0.5px solid rgba(255,255,255,0.2); border-radius: var(--radius-md);
-      font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
-      letter-spacing: 0.5px; text-transform: uppercase; cursor: pointer; transition: all 0.15s;
-    }
-    .share-btn:hover { background: rgba(255,255,255,0.16); color: #fff; }
-    .share-btn:active { transform: scale(0.98); }
+    /* SHARE */
+    .share-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: calc(100% - 2.5rem); margin: 0.25rem 1.25rem 0.75rem; padding: 11px; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75); border: 0.5px solid rgba(255,255,255,0.18); border-radius: var(--radius-md); font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; cursor: pointer; transition: all 0.15s; }
+    .share-btn:hover { background: rgba(255,255,255,0.14); color: #fff; }
+
+    /* DISCLOSURE */
+    .disclosure { font-size: 10px; color: rgba(255,255,255,0.3); text-align: center; padding: 0 1.25rem 1rem; line-height: 1.5; }
 
     /* PRO TIP */
-    .pro-tip {
-      padding: 11px 13px; background: var(--surface-alt);
-      border-radius: var(--radius-md); border-left: 3px solid var(--wc-gold); margin-bottom: 1rem;
-    }
+    .pro-tip { padding: 11px 13px; background: var(--surface-alt); border-radius: var(--radius-md); border-left: 3px solid var(--wc-gold); margin-bottom: 1rem; }
     .pro-tip p { font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
     .pro-tip strong { font-weight: 600; color: var(--text-primary); }
 
-    /* DISCLOSURE */
-    .disclosure {
-      font-size: 10px; color: var(--text-hint); text-align: center;
-      padding: 0 1.25rem 1rem; line-height: 1.5;
-    }
-
     /* TOAST */
-    .toast {
-      position: fixed; bottom: 24px; left: 50%;
-      transform: translateX(-50%) translateY(20px);
-      background: #111; color: #fff; padding: 9px 20px;
-      border-radius: 24px; font-size: 13px; font-weight: 500;
-      opacity: 0; transition: all 0.25s; pointer-events: none; z-index: 999;
-    }
+    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: #111; color: #fff; padding: 9px 20px; border-radius: 24px; font-size: 13px; font-weight: 500; opacity: 0; transition: all 0.25s; pointer-events: none; z-index: 999; }
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-    /* FOOTER */
     footer { text-align: center; padding: 2rem 1.5rem; font-size: 11px; color: var(--text-hint); }
-
-    /* UTILS */
     .section-divider { border: none; border-top: 0.5px solid var(--border); margin: 1.1rem 0; }
-    .section-title {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700;
-      letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-hint); margin-bottom: 8px;
-    }
+    .section-title { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-hint); margin-bottom: 8px; }
   </style>
-<script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1">
-  (function () {
-      var script = document.createElement("script");
-      script.async = 1;
-      script.src = 'https://emrldtp.com/NTM0OTk1.js?t=534995';
-      document.head.appendChild(script);
-  })();
-</script>
 </head>
 <body>
 
@@ -325,12 +195,26 @@
   </div>
 </div>
 
+<!-- AIRALO ESIM BANNER -->
+<div class="esim-banner">
+  <div class="esim-inner">
+    <div class="esim-text">
+      <i class="ti ti-device-mobile esim-icon"></i>
+      <div class="esim-copy">
+        <strong>Traveling internationally to the World Cup?</strong> Get a US eSIM before you land — no roaming charges, instant activation.
+      </div>
+    </div>
+    <a href="https://airalo.tpo.lu/jyabTrgp" target="_blank" rel="noopener" class="esim-btn">
+      <i class="ti ti-sim-card"></i> Get eSIM — Airalo
+    </a>
+  </div>
+</div>
+
 <div class="page-body">
 
   <!-- LEFT INPUTS -->
   <div>
 
-    <!-- ORIGIN + PARTY -->
     <div class="card">
       <div class="card-header"><h2><i class="ti ti-user-circle"></i> Your Details</h2></div>
       <div class="card-body">
@@ -362,7 +246,7 @@
         <hr class="section-divider" style="margin-bottom:1rem;">
         <div class="grid-2">
           <div class="field-group" style="margin-bottom:0;">
-            <span class="field-label">Arrival date (approx.)</span>
+            <span class="field-label">Arrival date</span>
             <select id="checkin">
               <option value="2026-06-11">Jun 11 (opening day)</option>
               <option value="2026-06-14">Jun 14</option>
@@ -375,13 +259,13 @@
             </select>
           </div>
           <div class="field-group" style="margin-bottom:0;">
-            <span class="field-label">Departure date (approx.)</span>
+            <span class="field-label">Departure date</span>
             <select id="checkout">
               <option value="2026-06-18">Jun 18</option>
               <option value="2026-06-22">Jun 22</option>
-              <option value="2026-06-26">Jun 26 (+2wk)</option>
+              <option value="2026-06-26">Jun 26</option>
               <option value="2026-06-30">Jun 30</option>
-              <option value="2026-07-05" selected>Jul 5 (+3wk)</option>
+              <option value="2026-07-05" selected>Jul 5</option>
               <option value="2026-07-12">Jul 12</option>
               <option value="2026-07-19">Jul 19 (Final day)</option>
             </select>
@@ -390,7 +274,6 @@
       </div>
     </div>
 
-    <!-- CITIES -->
     <div class="card">
       <div class="card-header"><h2><i class="ti ti-map-2"></i> Host Cities to Visit</h2></div>
       <div class="card-body">
@@ -422,7 +305,6 @@
       </div>
     </div>
 
-    <!-- MATCH TYPE -->
     <div class="card">
       <div class="card-header"><h2><i class="ti ti-ball-football"></i> Which Rounds Will You Attend?</h2></div>
       <div class="card-body">
@@ -440,7 +322,7 @@
           <div class="match-btn" data-type="qf">
             <i class="ti ti-award mb-icon"></i>
             <span class="mb-name">Quarterfinals Run</span>
-            <span class="mb-desc">5–6 matches · big budget jump</span>
+            <span class="mb-desc">5–6 matches · big jump</span>
           </div>
           <div class="match-btn" data-type="final">
             <i class="ti ti-crown mb-icon"></i>
@@ -451,7 +333,6 @@
       </div>
     </div>
 
-    <!-- HOTEL TIER -->
     <div class="card">
       <div class="card-header"><h2><i class="ti ti-bed"></i> Accommodation</h2></div>
       <div class="card-body">
@@ -459,23 +340,22 @@
           <div class="tier-btn" data-tier="budget">
             <span class="t-icon"><i class="ti ti-building"></i></span>
             <span class="t-name">Budget</span>
-            <span class="t-price">$120–180 / night</span>
+            <span class="t-price">$120–180/night</span>
           </div>
           <div class="tier-btn active" data-tier="mid">
             <span class="t-icon"><i class="ti ti-building-community"></i></span>
             <span class="t-name">Mid-range</span>
-            <span class="t-price">$220–320 / night</span>
+            <span class="t-price">$220–320/night</span>
           </div>
           <div class="tier-btn" data-tier="luxury">
             <span class="t-icon"><i class="ti ti-building-skyscraper"></i></span>
             <span class="t-name">Luxury</span>
-            <span class="t-price">$400–600 / night</span>
+            <span class="t-price">$400–600/night</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDERS -->
     <div class="card">
       <div class="card-header"><h2><i class="ti ti-adjustments-horizontal"></i> Trip Details</h2></div>
       <div class="card-body">
@@ -505,14 +385,13 @@
       </div>
     </div>
 
-    <!-- PRO TIP -->
     <div class="pro-tip">
       <p id="tip-text"><strong>Pro tip:</strong> Group stage only? Smart budget play. Prices are 60% lower than knockout rounds and you still get the full atmosphere.</p>
     </div>
 
   </div>
 
-  <!-- RIGHT: RESULTS -->
+  <!-- RIGHT RESULTS -->
   <div>
     <div class="results-card">
 
@@ -538,42 +417,65 @@
         </div>
       </div>
 
-      <!-- AFFILIATE BUTTONS -->
       <div class="aff-section">
-        <div class="aff-label"><i class="ti ti-external-link" style="font-size:11px;margin-right:4px;"></i>Book your trip</div>
 
-        <!-- Tickets -->
-        <a id="btn-tickets" href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/tickets" target="_blank" rel="noopener" class="aff-btn-wide btn-tickets-wide">
-          <i class="ti ti-ticket"></i> Find Official Tickets — FIFA.com
+        <div class="aff-label"><i class="ti ti-ticket" style="font-size:11px;margin-right:4px;"></i>Official Tickets</div>
+        <a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/tickets" target="_blank" rel="noopener" class="aff-btn-wide btn-tickets-wide">
+          <i class="ti ti-ticket"></i> Buy Official Tickets — FIFA.com
         </a>
 
-        <!-- Flights row -->
-        <div class="aff-grid">
-          <a id="btn-skyscanner" href="#" target="_blank" rel="noopener" class="aff-btn btn-skyscanner">
-            <i class="ti ti-plane"></i>
-            Search Flights
-            <span class="aff-provider">Skyscanner</span>
+        <div class="aff-label" style="margin-top:10px;"><i class="ti ti-plane" style="font-size:11px;margin-right:4px;"></i>Flights</div>
+        <div class="aff-grid-2" style="margin-bottom:10px;">
+          <a href="https://aviasales.tpo.lu/xrQAYPN1" target="_blank" rel="noopener" class="aff-btn btn-aviasales">
+            <i class="ti ti-plane"></i> Search Flights
+            <span class="aff-sub">Aviasales</span>
           </a>
-          <a id="btn-kayak" href="#" target="_blank" rel="noopener" class="aff-btn btn-kayak">
-            <i class="ti ti-plane-departure"></i>
-            Search Flights
-            <span class="aff-provider">Kayak</span>
+          <a href="https://ektatraveling.tpo.lu/nWQWFYAQ" target="_blank" rel="noopener" class="aff-btn btn-ekta">
+            <i class="ti ti-shield-check"></i> Travel Insurance
+            <span class="aff-sub">EKTA</span>
           </a>
         </div>
 
-        <!-- Hotels row -->
-        <div class="aff-grid">
-          <a id="btn-booking" href="#" target="_blank" rel="noopener" class="aff-btn btn-booking">
-            <i class="ti ti-bed"></i>
-            Find Hotels
-            <span class="aff-provider">Booking.com</span>
+        <div class="aff-label"><i class="ti ti-bed" style="font-size:11px;margin-right:4px;"></i>Hotels & Accommodation</div>
+        <div class="aff-grid-2" style="margin-bottom:10px;">
+          <a id="btn-econbook" href="https://economybookings.tpo.lu/PuoIPt8h" target="_blank" rel="noopener" class="aff-btn btn-econbook">
+            <i class="ti ti-building-community"></i> Find Hotels
+            <span class="aff-sub">EconomyBookings</span>
           </a>
-          <a id="btn-hotels" href="#" target="_blank" rel="noopener" class="aff-btn btn-hotels">
-            <i class="ti ti-building-community"></i>
-            Find Hotels
-            <span class="aff-provider">Hotels.com</span>
+          <a href="https://airhelp.tpo.lu/GvBk9kiF" target="_blank" rel="noopener" class="aff-btn btn-airhelp">
+            <i class="ti ti-clipboard-check"></i> Flight Delay Help
+            <span class="aff-sub">AirHelp</span>
           </a>
         </div>
+
+        <div class="aff-label"><i class="ti ti-car" style="font-size:11px;margin-right:4px;"></i>Ground Transport</div>
+        <div class="aff-grid-3">
+          <a href="https://kiwitaxi.tpo.lu/g1DknrmD" target="_blank" rel="noopener" class="aff-btn btn-kiwitaxi">
+            <i class="ti ti-car"></i> Airport Taxi
+            <span class="aff-sub">Kiwitaxi</span>
+          </a>
+          <a href="https://tpo.lu/eonndgLv" target="_blank" rel="noopener" class="aff-btn btn-welcomepick">
+            <i class="ti ti-steering-wheel"></i> Airport Transfer
+            <span class="aff-sub">Welcome Pickups</span>
+          </a>
+          <a href="https://getrentacar.tpo.lu/WaQ5J3Ae" target="_blank" rel="noopener" class="aff-btn btn-rentacar">
+            <i class="ti ti-car-suv"></i> Rent a Car
+            <span class="aff-sub">GetRentacar</span>
+          </a>
+        </div>
+
+        <div class="aff-label" style="margin-top:10px;"><i class="ti ti-map" style="font-size:11px;margin-right:4px;"></i>Experiences</div>
+        <div class="aff-grid-2">
+          <a href="https://gocity.tpo.lu/j11a4XQZ" target="_blank" rel="noopener" class="aff-btn btn-gocity">
+            <i class="ti ti-building-arch"></i> City Attraction Pass
+            <span class="aff-sub">Go City</span>
+          </a>
+          <a href="https://airalo.tpo.lu/jyabTrgp" target="_blank" rel="noopener" class="aff-btn" style="background:#1a1a2e;border:1px solid #D4A017;">
+            <i class="ti ti-sim-card" style="color:#D4A017;"></i> <span style="color:#fff;">Get eSIM</span>
+            <span class="aff-sub" style="color:#D4A017;">Airalo</span>
+          </a>
+        </div>
+
       </div>
 
       <button class="share-btn" id="share-btn">
@@ -589,51 +491,19 @@
 
 </div>
 
-<footer>
-  Estimates based on current market data · June 2026 prices · Always budget a 20–30% contingency.
-</footer>
-
+<footer>Estimates based on current market data · June 2026 · Always budget a 20–30% contingency.</footer>
 <div class="toast" id="toast"><i class="ti ti-check" style="margin-right:5px;"></i>Copied to clipboard!</div>
 
 <script>
-  // ─── AFFILIATE IDs ────────────────────────────────────────────────
-  // REPLACE these placeholder values with your real affiliate IDs
-  const AFF = {
-    skyscanner_id: 'YOUR_SKYSCANNER_PARTNER_ID',   // skyscanner.net/affiliates
-    kayak_id:      'YOUR_KAYAK_SID',               // partners.kayak.com
-    booking_aid:   'YOUR_BOOKING_AID',             // partner.booking.com
-    hotels_id:     'YOUR_HOTELS_CID'               // affiliates.expediagroup.com
-  };
-  // ─────────────────────────────────────────────────────────────────
-
   const FLIGHT = {
-    us_domestic:   { base: 320,  multi: 180, iata: 'US' },
-    canada:        { base: 520,  multi: 240, iata: 'CA' },
-    mexico:        { base: 380,  multi: 180, iata: 'MX' },
-    uk_europe:     { base: 1100, multi: 280, iata: 'EU' },
-    south_america: { base: 860,  multi: 260, iata: 'SA' },
-    africa:        { base: 1380, multi: 380, iata: 'AF' },
-    middle_east:   { base: 1560, multi: 460, iata: 'ME' },
-    asia_pacific:  { base: 1780, multi: 480, iata: 'AP' }
-  };
-
-  // First primary city IATA for each slug (used in flight deep links)
-  const CITY_IATA = {
-    new_york: 'JFK', los_angeles: 'LAX', dallas: 'DFW', miami: 'MIA',
-    houston: 'IAH', boston: 'BOS', seattle: 'SEA', atlanta: 'ATL',
-    kansas_city: 'MCI', philadelphia: 'PHL', sf_bay: 'SFO',
-    toronto: 'YYZ', vancouver: 'YVR',
-    mexico_city: 'MEX', guadalajara: 'GDL', monterrey: 'MTY'
-  };
-
-  // Booking.com city IDs (used for hotel deep links)
-  const BOOKING_CITY = {
-    new_york: '-74000', los_angeles: '-1506450', dallas: '-1549981',
-    miami: '-1243773', houston: '-1549973', boston: '-996476',
-    seattle: '-148321', atlanta: '-1244455', kansas_city: '-1244464',
-    philadelphia: '-1811399', sf_bay: '-148323',
-    toronto: '-574890', vancouver: '-575267',
-    mexico_city: '-1658079', guadalajara: '-1657930', monterrey: '-1658083'
+    us_domestic:   { base: 320,  multi: 180 },
+    canada:        { base: 520,  multi: 240 },
+    mexico:        { base: 380,  multi: 180 },
+    uk_europe:     { base: 1100, multi: 280 },
+    south_america: { base: 860,  multi: 260 },
+    africa:        { base: 1380, multi: 380 },
+    middle_east:   { base: 1560, multi: 460 },
+    asia_pacific:  { base: 1780, multi: 480 }
   };
 
   const HOTEL = { budget: 150, mid: 270, luxury: 500 };
@@ -664,20 +534,16 @@
   let selectedTier   = 'mid';
   let selectedMatch  = 'group';
 
-  // City chips
   document.querySelectorAll('.chip').forEach(chip => {
     chip.addEventListener('click', () => {
       const slug = chip.dataset.slug;
       if (selectedCities.has(slug)) {
         if (selectedCities.size > 1) { selectedCities.delete(slug); chip.classList.remove('active'); }
-      } else {
-        selectedCities.add(slug); chip.classList.add('active');
-      }
+      } else { selectedCities.add(slug); chip.classList.add('active'); }
       calculate();
     });
   });
 
-  // Match type
   document.querySelectorAll('.match-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.match-btn').forEach(b => b.classList.remove('active'));
@@ -688,7 +554,6 @@
     });
   });
 
-  // Hotel tier
   document.querySelectorAll('.tier-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tier-btn').forEach(b => b.classList.remove('active'));
@@ -698,7 +563,6 @@
     });
   });
 
-  // Sliders
   const daysSlider = document.getElementById('trip-days');
   daysSlider.addEventListener('input', () => { document.getElementById('days-val').textContent = daysSlider.value; calculate(); });
 
@@ -715,45 +579,6 @@
 
   function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
 
-  function getFirstCity() {
-    return Array.from(selectedCities)[0] || 'new_york';
-  }
-
-  function buildAffiliateLinks() {
-    const checkin  = document.getElementById('checkin').value;
-    const checkout = document.getElementById('checkout').value;
-    const party    = parseInt(document.getElementById('party').value);
-    const city     = getFirstCity();
-    const iata     = CITY_IATA[city] || 'JFK';
-    const bookingCity = BOOKING_CITY[city] || '-74000';
-    const origin   = document.getElementById('origin').value;
-    const rooms    = Math.ceil(party / 2);
-
-    // Checkin/checkout parts
-    const ci = checkin; // YYYY-MM-DD
-    const co = checkout;
-    const ciParts = ci.split('-');
-    const coParts = co.split('-');
-
-    // Skyscanner deep link (pre-fills destination city, date, passengers)
-    // Format: /transport/flights/anywhere/{destination}/{date-out}/{date-in}?adults=N
-    const skyScannerUrl = `https://www.skyscanner.net/transport/flights/anywhere/${iata}/${ciParts[0].slice(2)}${ciParts[1]}${ciParts[2]}/${coParts[0].slice(2)}${coParts[1]}${coParts[2]}/?adults=${party}&ref=${AFF.skyscanner_id}`;
-
-    // Kayak deep link
-    const kayakUrl = `https://www.kayak.com/flights/anywhere-${iata}/${ci}/${co}/${party}adults?sid=${AFF.kayak_id}`;
-
-    // Booking.com deep link
-    const bookingUrl = `https://www.booking.com/searchresults.html?aid=${AFF.booking_aid}&dest_id=${bookingCity}&dest_type=city&checkin=${ci}&checkout=${co}&group_adults=${party}&no_rooms=${rooms}&sb_travel_purpose=leisure`;
-
-    // Hotels.com deep link
-    const hotelsUrl = `https://www.hotels.com/search.do?q-destination=${encodeURIComponent(iata)}&q-check-in=${ci}&q-check-out=${co}&q-rooms=${rooms}&q-room-0-adults=${party}&affiliateId=${AFF.hotels_id}`;
-
-    document.getElementById('btn-skyscanner').href = skyScannerUrl;
-    document.getElementById('btn-kayak').href      = kayakUrl;
-    document.getElementById('btn-booking').href    = bookingUrl;
-    document.getElementById('btn-hotels').href     = hotelsUrl;
-  }
-
   function calculate() {
     const origin = document.getElementById('origin').value;
     const party  = parseInt(document.getElementById('party').value);
@@ -762,12 +587,11 @@
     const insur  = parseInt(insurSlider.value);
     const numCities = selectedCities.size;
 
-    const flightData    = FLIGHT[origin];
-    const flightCost    = flightData.base + (numCities - 1) * flightData.multi;
+    const flightCost    = FLIGHT[origin].base + (numCities - 1) * FLIGHT[origin].multi;
     const hotelCost     = HOTEL[selectedTier] * days;
     const ticketData    = TICKETS[selectedMatch];
     const ticketCost    = ticketData.avg * ticketData.matches;
-    const transportCost = Array.from(selectedCities).reduce((s, c) => s + (CITY_TRANSPORT[c] || 20), 0) * Math.ceil(days / numCities) * 1.8;
+    const transportCost = Array.from(selectedCities).reduce((s,c) => s + (CITY_TRANSPORT[c]||20), 0) * Math.ceil(days/numCities) * 1.8;
     const foodCost      = food * days;
     const miscCost      = Math.round((flightCost + hotelCost + ticketCost) * 0.07);
     const totalPP       = flightCost + hotelCost + ticketCost + Math.round(transportCost) + foodCost + insur + miscCost;
@@ -778,7 +602,7 @@
       { label: 'Flights · ' + originLabel(origin), amount: flightCost, color: COLORS[1] },
       { label: 'Hotels · ' + days + ' nights (' + selectedTier + ')', amount: hotelCost, color: COLORS[2] },
       { label: 'Food & drink', amount: foodCost, color: COLORS[3] },
-      { label: 'Local transport · ' + numCities + ' cit' + (numCities === 1 ? 'y' : 'ies'), amount: Math.round(transportCost), color: COLORS[4] },
+      { label: 'Local transport · ' + numCities + ' cit' + (numCities===1?'y':'ies'), amount: Math.round(transportCost), color: COLORS[4] },
       { label: 'Travel insurance', amount: insur, color: COLORS[5] },
       { label: 'Misc & contingency', amount: miscCost, color: COLORS[6] }
     ];
@@ -786,45 +610,37 @@
     const maxAmt = Math.max(...breakdown.map(b => b.amount));
 
     document.getElementById('total-amount').textContent = Math.round(totalPP).toLocaleString('en-US');
-    document.getElementById('trip-summary').textContent = days + ' days · ' + numCities + ' cit' + (numCities === 1 ? 'y' : 'ies') + ' · ' + ticketData.label;
+    document.getElementById('trip-summary').textContent = days + ' days · ' + numCities + ' cit' + (numCities===1?'y':'ies') + ' · ' + ticketData.label;
 
     const partyEl = document.getElementById('party-total');
-    if (party > 1) {
-      partyEl.style.display = 'block';
-      partyEl.textContent = fmt(totalAll) + ' total for ' + party + ' people';
-    } else {
-      partyEl.style.display = 'none';
-    }
+    if (party > 1) { partyEl.style.display = 'block'; partyEl.textContent = fmt(totalAll) + ' total for ' + party + ' people'; }
+    else { partyEl.style.display = 'none'; }
 
     document.getElementById('breakdown-list').innerHTML = breakdown.map(item => `
       <div class="bi">
         <div class="bi-dot" style="background:${item.color}"></div>
         <div class="bi-name">${item.label}</div>
-        <div class="bi-bar-track"><div class="bi-bar-fill" style="width:${Math.round((item.amount / maxAmt) * 100)}%;background:${item.color}"></div></div>
+        <div class="bi-bar-track"><div class="bi-bar-fill" style="width:${Math.round((item.amount/maxAmt)*100)}%;background:${item.color}"></div></div>
         <div class="bi-cost">${fmt(item.amount)}</div>
-      </div>
-    `).join('');
+      </div>`).join('');
 
     document.getElementById('best-case').textContent  = fmt(totalPP * 0.77);
     document.getElementById('worst-case').textContent = fmt(totalPP * 1.38);
-
-    buildAffiliateLinks();
   }
 
   function originLabel(o) {
-    return { us_domestic: 'US', canada: 'Canada', mexico: 'Mexico', uk_europe: 'UK/EU', south_america: 'S. America', africa: 'Africa', middle_east: 'Middle East', asia_pacific: 'Asia/Pacific' }[o] || o;
+    return {us_domestic:'US',canada:'Canada',mexico:'Mexico',uk_europe:'UK/EU',south_america:'S. America',africa:'Africa',middle_east:'Middle East',asia_pacific:'Asia/Pacific'}[o]||o;
   }
 
-  // Share
   document.getElementById('share-btn').addEventListener('click', () => {
-    const origin  = document.getElementById('origin').options[document.getElementById('origin').selectedIndex].text;
-    const party   = document.getElementById('party').value;
-    const days    = daysSlider.value;
-    const cities  = Array.from(selectedCities).map(s => document.querySelector(`[data-slug="${s}"]`)?.textContent || s).join(', ');
-    const total   = '$' + document.getElementById('total-amount').textContent;
-    const best    = document.getElementById('best-case').textContent;
-    const worst   = document.getElementById('worst-case').textContent;
-    const match   = document.getElementById('match-grid').querySelector('.active .mb-name').textContent;
+    const origin = document.getElementById('origin').options[document.getElementById('origin').selectedIndex].text;
+    const party  = document.getElementById('party').value;
+    const days   = daysSlider.value;
+    const cities = Array.from(selectedCities).map(s => document.querySelector(`[data-slug="${s}"]`)?.textContent||s).join(', ');
+    const total  = '$' + document.getElementById('total-amount').textContent;
+    const best   = document.getElementById('best-case').textContent;
+    const worst  = document.getElementById('worst-case').textContent;
+    const match  = document.getElementById('match-grid').querySelector('.active .mb-name').textContent;
 
     const text = [
       '🏆 My FIFA World Cup 2026 Budget',
@@ -845,7 +661,7 @@
       const toast = document.getElementById('toast');
       toast.classList.add('show');
       setTimeout(() => toast.classList.remove('show'), 2400);
-    }).catch(() => { alert(text); });
+    }).catch(() => alert(text));
   });
 
   calculate();
