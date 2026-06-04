@@ -149,7 +149,7 @@
     .aff-btn i { font-size: 17px; margin-bottom: 1px; }
     .aff-btn .aff-sub { font-size: 9px; font-weight: 400; opacity: 0.7; margin-top: 1px; }
     .btn-aviasales   { background: #33A9DC; }
-    .btn-econbook    { background: #2B5EA7; }
+    .btn-econbook    { background: #FF5722; }
     .btn-kiwitaxi    { background: #FF6B00; }
     .btn-welcomepick { background: #1DB954; }
     .btn-rentacar    { background: #E63946; }
@@ -186,9 +186,20 @@
     footer { text-align: center; padding: 2rem 1.5rem; font-size: 11px; color: var(--text-hint); }
     .section-divider { border: none; border-top: 0.5px solid var(--border); margin: 1.1rem 0; }
     .section-title { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-hint); margin-bottom: 8px; }
+  
+    .lang-toggle { position: fixed; top: 14px; right: 16px; z-index: 9999; display: flex; background: rgba(0,0,0,0.55); border: 1px solid rgba(255,255,255,0.18); border-radius: 20px; padding: 3px; backdrop-filter: blur(8px); gap: 2px; }
+    .lang-btn { padding: 5px 14px; border-radius: 16px; border: none; font-size: 13px; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: all 0.18s; background: transparent; color: rgba(255,255,255,0.55); font-family: inherit; }
+    .lang-btn.active { background: #fff; color: #00205B; }
+    .lang-btn:hover:not(.active) { color: #fff; }
+
   </style>
 </head>
 <body>
+<div class="lang-toggle" id="langToggle">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+</div>
+
 
 <div class="hero">
   <div class="hero-inner">
@@ -211,9 +222,14 @@
         <strong>Traveling internationally to the World Cup?</strong> Get a US eSIM before you land — no roaming charges, instant activation.
       </div>
     </div>
-    <a href="https://airalo.tpo.lu/jyabTrgp" target="_blank" rel="noopener" class="esim-btn">
-      <i class="ti ti-sim-card"></i> Get eSIM — Airalo
-    </a>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <a href="https://airalo.tpo.lu/jyabTrgp" target="_blank" rel="noopener" class="esim-btn">
+        <i class="ti ti-sim-card"></i> Airalo eSIM
+      </a>
+      <a href="https://kkday.tpo.lu/ncnsOoW9" target="_blank" rel="noopener" class="esim-btn" style="background:#E31837;">
+        <i class="ti ti-wifi"></i> KKday SIM
+      </a>
+    </div>
   </div>
 </div>
 
@@ -445,9 +461,9 @@
 
         <div class="aff-label"><i class="ti ti-bed" style="font-size:11px;margin-right:4px;"></i>Hotels & Accommodation</div>
         <div class="aff-grid-2" style="margin-bottom:10px;">
-          <a id="btn-econbook" href="https://economybookings.tpo.lu/PuoIPt8h" target="_blank" rel="noopener" class="aff-btn btn-econbook">
-            <i class="ti ti-building-community"></i> Find Hotels
-            <span class="aff-sub">EconomyBookings</span>
+          <a id="btn-econbook" href="https://klook.tpo.lu/CNWEHngz" target="_blank" rel="noopener" class="aff-btn btn-econbook">
+            <i class="ti ti-building-community"></i> Book Hotel
+            <span class="aff-sub">Klook Hotels</span>
           </a>
           <a href="https://airhelp.tpo.lu/GvBk9kiF" target="_blank" rel="noopener" class="aff-btn btn-airhelp">
             <i class="ti ti-clipboard-check"></i> Flight Delay Help
@@ -474,6 +490,10 @@
 
         <div class="aff-label" style="margin-top:10px;"><i class="ti ti-map" style="font-size:11px;margin-right:4px;"></i>Experiences</div>
         <div class="aff-grid-2">
+          <a href="https://kkday.tpo.lu/ncnsOoW9" target="_blank" rel="noopener" class="aff-btn" style="background:#E31837;">
+            <i class="ti ti-map-search"></i> Tours + Tickets
+            <span class="aff-sub">KKday Tours</span>
+          </a>
           <a href="https://gocity.tpo.lu/j11a4XQZ" target="_blank" rel="noopener" class="aff-btn btn-gocity">
             <i class="ti ti-building-arch"></i> City Attraction Pass
             <span class="aff-sub">Go City</span>
@@ -848,5 +868,71 @@
 
   calculate();
 </script>
+<script>
+var TRANS={en:{eyebrow:'FIFA World Cup 2026',h1a:'What Will Your',h1b:'World Cup',h1c:'Cost?',sub1:'June 11 – July 19, 2026',sub2:'USA · Canada · Mexico',sub3:'16 Host Cities',esim_copy:'<strong>Traveling internationally to the World Cup?</strong> Get a US eSIM before you land — no roaming charges, instant activation.',esim_btn:'Get eSIM — Airalo',c1:'Your Details',c2:'Host Cities to Visit',c3:'Which Rounds Will You Attend?',c4:'Accommodation',c5:'Trip Details',lo:'Where are you flying from?',lp:'Travel party size',la:'Arrival date',ld:'Departure date',sus:'United States',sca:'Canada',smx:'Mexico',m1n:'Group Stage Only',m1d:'3 matches · lowest prices',m2n:'Into Round of 16',m2d:'4–5 matches · prices spike',m3n:'Quarterfinals Run',m3d:'5–6 matches · big jump',m4n:'Full Run to the Final',m4d:'7 matches · top-tier cost',t1n:'Budget',t1p:'$120–180/night',t2n:'Mid-range',t2p:'$220–320/night',t3n:'Luxury',t3p:'$400–600/night',ldays:'Trip length',lfood:'Food & drink per person / day',lins:'Travel insurance (per person)',tip:'Pro tip:',re:'Estimated cost per person',bl:'BEST CASE',bn:"Everything goes right",wl:'BUDGET FOR',wn:"Don't get caught short",at:'Official Tickets',atb:'Buy Official Tickets — FIFA.com',af:'Flights',ah:'Hotels & Accommodation',ag:'Ground Transport',ax:'Experiences',ap:'EXCLUSIVE PROMO',apt:'Use code <strong style="color:#fff;background:rgba(240,165,0,0.3);padding:1px 6px;border-radius:4px;">TPO5</strong> for 5% off any Kiwitaxi transfer',sb:'Download My Budget Card',mdt:'Match Day Guide',mds:"Gates · Transport · What's banned · After the match",disc:'Links may earn a commission at no extra cost to you. Prices are estimates only.',foot:'Estimates based on current market data · June 2026 · Always budget a 20–30% contingency.',ori:['United States (domestic)','Canada','Mexico','UK / Europe','South America','Africa','Middle East','Asia / Pacific'],par:['Just me (1)','2 people','3 people','4 people','6 people'],tips:{group:"Group stage only? Smart budget play. Prices are 60% lower than knockout rounds.",r16:"Round of 16 prices jump 40–60% over group stage. Book hotels and flights NOW.",qf:"Quarterfinal runs are where budgets blow up. Build in at least a 30% contingency.",final:"Going for the Final? Resale tickets hit $230,000 on FIFA's own platform."}},es:{eyebrow:'Copa Mundial FIFA 2026',h1a:'Cuanto costara',h1b:'tu viaje al',h1c:'Mundial?',sub1:'11 Jun – 19 Jul, 2026',sub2:'EE.UU. · Canada · Mexico',sub3:'16 Ciudades Sede',esim_copy:'<strong>Viajando al Mundial desde el extranjero?</strong> Compra tu eSIM para EE.UU. antes de llegar — sin roaming, activacion instantanea.',esim_btn:'Obtener eSIM — Airalo',c1:'Tus Datos',c2:'Ciudades Sede a Visitar',c3:'A que rondas vas a asistir?',c4:'Alojamiento',c5:'Detalles del Viaje',lo:'Desde donde vuelas?',lp:'Tamano del grupo',la:'Fecha de llegada',ld:'Fecha de salida',sus:'Estados Unidos',sca:'Canada',smx:'Mexico',m1n:'Solo Fase de Grupos',m1d:'3 partidos · precios bajos',m2n:'Hasta Octavos',m2d:'4–5 partidos · precios suben',m3n:'Hasta Cuartos',m3d:'5–6 partidos · salto grande',m4n:'Hasta la Final',m4d:'7 partidos · costo maximo',t1n:'Economico',t1p:'$120–180/noche',t2n:'Intermedio',t2p:'$220–320/noche',t3n:'Lujo',t3p:'$400–600/noche',ldays:'Duracion del viaje',lfood:'Comida y bebida por persona / dia',lins:'Seguro de viaje (por persona)',tip:'Consejo:',re:'Costo estimado por persona',bl:'MEJOR CASO',bn:'Todo sale bien',wl:'PRESUPUESTA PARA',wn:'No te quedes corto',at:'Entradas Oficiales',atb:'Comprar Entradas Oficiales — FIFA.com',af:'Vuelos',ah:'Hoteles y Alojamiento',ag:'Transporte Terrestre',ax:'Experiencias',ap:'PROMO EXCLUSIVA',apt:'Usa el codigo <strong style="color:#fff;background:rgba(240,165,0,0.3);padding:1px 6px;border-radius:4px;">TPO5</strong> en Kiwitaxi y ahorra 5%',sb:'Descargar Mi Tarjeta de Presupuesto',mdt:'Guia Dia de Partido',mds:'Accesos · Transporte · Prohibiciones · Despues del partido',disc:'Los enlaces pueden generar comisiones sin costo adicional. Los precios son estimados.',foot:'Estimaciones basadas en datos actuales · Junio 2026 · Siempre presupuesta un 20–30% adicional.',ori:['Estados Unidos (domestico)','Canada','Mexico','UK / Europa','Sudamerica','Africa','Medio Oriente','Asia / Pacifico'],par:['Solo yo (1)','2 personas','3 personas','4 personas','6 personas'],tips:{group:'Solo fase de grupos? Los precios son 60% mas bajos que en eliminatorias. Gran decision.',r16:'Los precios en octavos suben 40–60%. Reserva hotel y vuelos YA antes de que avance tu equipo.',qf:'Los cuartos de final son donde los presupuestos se disparan. Agrega 30% de contingencia.',final:'Vas a la Final? Las entradas de reventa llegaron a $230,000 en la plataforma de FIFA.'}}};
+var curLang=localStorage.getItem('wc_lang')||'en';
+function setLang(lang){
+  curLang=lang; localStorage.setItem('wc_lang',lang);
+  var t=TRANS[lang];
+  document.getElementById('btn-en').classList.toggle('active',lang==='en');
+  document.getElementById('btn-es').classList.toggle('active',lang==='es');
+  var ey=document.querySelector('.hero-eyebrow'); if(ey) ey.innerHTML='<i class="ti ti-trophy"></i> '+t.eyebrow;
+  var h1=document.querySelector('.hero h1'); if(h1) h1.innerHTML=t.h1a+'<br><span>'+t.h1b+'</span><br>'+t.h1c;
+  var subs=document.querySelectorAll('.hero-sub span');
+  if(subs[0]) subs[0].innerHTML='<i class="ti ti-calendar-event"></i> '+t.sub1;
+  if(subs[1]) subs[1].innerHTML='<i class="ti ti-map-pin"></i> '+t.sub2;
+  if(subs[2]) subs[2].innerHTML='<i class="ti ti-building-stadium"></i> '+t.sub3;
+  var ec=document.querySelector('.esim-copy'); if(ec) ec.innerHTML=t.esim_copy;
+  var eb=document.querySelector('.esim-btn'); if(eb) eb.innerHTML='<i class="ti ti-sim-card"></i> '+t.esim_btn;
+  var chs=document.querySelectorAll('.card-header h2');
+  var ck=['c1','c2','c3','c4','c5'];
+  var ci=['ti-user-circle','ti-map-2','ti-ball-football','ti-bed','ti-adjustments-horizontal'];
+  chs.forEach(function(h,i){if(ck[i])h.innerHTML='<i class="ti '+ci[i]+'"></i> '+t[ck[i]];});
+  var fls=document.querySelectorAll('.field-label');
+  var fk=['lo','lp','la','ld'];
+  fls.forEach(function(l,i){if(fk[i])l.textContent=t[fk[i]];});
+  var os=document.getElementById('origin');
+  if(os) Array.from(os.options).forEach(function(o,i){if(t.ori[i])o.text=t.ori[i];});
+  var ps=document.getElementById('party');
+  if(ps) Array.from(ps.options).forEach(function(o,i){if(t.par[i])o.text=t.par[i];});
+  var sts=document.querySelectorAll('.section-title');
+  var sk=['sus','sca','smx'];
+  sts.forEach(function(s,i){if(sk[i])s.textContent=t[sk[i]];});
+  var mbs=document.querySelectorAll('.match-btn');
+  var mk=[['m1n','m1d'],['m2n','m2d'],['m3n','m3d'],['m4n','m4d']];
+  mbs.forEach(function(b,i){if(mk[i]){b.querySelector('.mb-name').textContent=t[mk[i][0]];b.querySelector('.mb-desc').textContent=t[mk[i][1]];}});
+  var tbs=document.querySelectorAll('.tier-btn');
+  var tk=[['t1n','t1p'],['t2n','t2p'],['t3n','t3p']];
+  tbs.forEach(function(b,i){if(tk[i]){b.querySelector('.t-name').textContent=t[tk[i][0]];b.querySelector('.t-price').textContent=t[tk[i][1]];}});
+  var rls=document.querySelectorAll('.r-label');
+  var rlk=['ldays','lfood','lins'];
+  rls.forEach(function(l,i){if(rlk[i]){var ic=l.querySelector('i');l.innerHTML=(ic?ic.outerHTML+' ':'')+t[rlk[i]];}});
+  var tt=document.getElementById('tip-text'); if(tt) tt.innerHTML='<strong>'+t.tip+'</strong> '+t.tips[selectedMatch||'group'];
+  var re=document.querySelector('.r-eyebrow'); if(re) re.textContent=t.re;
+  var bsl=document.querySelector('.sc-card.best .sc-label'); if(bsl) bsl.textContent=t.bl;
+  var bsn=document.querySelector('.sc-card.best .sc-note');  if(bsn) bsn.textContent=t.bn;
+  var wsl=document.querySelector('.sc-card.worst .sc-label');if(wsl) wsl.textContent=t.wl;
+  var wsn=document.querySelector('.sc-card.worst .sc-note'); if(wsn) wsn.textContent=t.wn;
+  var als=document.querySelectorAll('.aff-label');
+  var ak=['at','af','ah','ag','ax'];
+  var ai=['ti-ticket','ti-plane','ti-bed','ti-car','ti-map'];
+  als.forEach(function(l,i){if(ak[i])l.innerHTML='<i class="ti '+ai[i]+'" style="font-size:11px;margin-right:4px;"></i>'+t[ak[i]];});
+  var tkb=document.querySelector('.btn-tickets-wide'); if(tkb) tkb.innerHTML='<i class="ti ti-ticket"></i> '+t.atb;
+  document.querySelectorAll('.aff-section > div').forEach(function(d){
+    var fc=d.querySelector('div div:first-child');
+    if(fc&&(fc.textContent.includes('EXCLUSIVE')||fc.textContent.includes('PROMO'))){
+      fc.textContent=t.ap;
+      var sc=d.querySelector('div div:last-child'); if(sc) sc.innerHTML=t.apt;
+    }
+  });
+  var sb=document.getElementById('share-btn'); if(sb) sb.innerHTML='<i class="ti ti-photo-share"></i> '+t.sb;
+  var mdt=document.querySelector('.md-link-title'); if(mdt) mdt.textContent=t.mdt;
+  var mds=document.querySelector('.md-link-sub');   if(mds) mds.textContent=t.mds;
+  var dc=document.querySelector('.disclosure'); if(dc) dc.textContent=t.disc;
+  var ft=document.querySelector('footer p'); if(ft) ft.textContent=t.foot;
+  if(typeof calculate==='function') calculate();
+}
+document.addEventListener('DOMContentLoaded',function(){setLang(curLang);});</script>
+
 </body>
 </html>
