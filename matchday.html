@@ -215,9 +215,20 @@
     /* SCROLL REVEAL */
     .reveal { opacity: 0; transform: translateY(16px); transition: all 0.4s ease; }
     .reveal.in { opacity: 1; transform: translateY(0); }
+  
+    .lang-toggle { position: fixed; top: 14px; right: 16px; z-index: 9999; display: flex; background: rgba(0,0,0,0.55); border: 1px solid rgba(255,255,255,0.18); border-radius: 20px; padding: 3px; backdrop-filter: blur(8px); gap: 2px; }
+    .lang-btn { padding: 5px 14px; border-radius: 16px; border: none; font-size: 13px; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: all 0.18s; background: transparent; color: rgba(255,255,255,0.55); font-family: inherit; }
+    .lang-btn.active { background: #fff; color: #00205B; }
+    .lang-btn:hover:not(.active) { color: #fff; }
+
   </style>
 </head>
 <body>
+<div class="lang-toggle" id="langToggle">
+  <button class="lang-btn active" id="btn-en" onclick="setMdLang('en')">EN</button>
+  <button class="lang-btn" id="btn-es" onclick="setMdLang('es')">ES</button>
+</div>
+
 
 <div class="hero">
   <div class="hero-glow"></div>
@@ -379,6 +390,14 @@
       <div style="background:rgba(240,165,0,0.08);border:1px solid rgba(240,165,0,0.22);border-radius:8px;padding:9px 13px;margin-bottom:10px;display:flex;align-items:center;gap:10px;"><span style="font-size:18px;">🎟️</span><div><div style="font-size:10px;font-weight:700;color:var(--gold);letter-spacing:1px;text-transform:uppercase;">Exclusive promo</div><div style="font-size:12px;color:rgba(255,255,255,0.65);margin-top:2px;">Use code <strong style="color:#fff;background:rgba(240,165,0,0.25);padding:1px 7px;border-radius:4px;font-size:12px;">TPO5</strong> at Kiwitaxi for 5% off your transfer</div></div></div>
         <div class="info-label">Pre-book your transfer</div>
       <div class="aff-row">
+        <a href="https://kkday.tpo.lu/ncnsOoW9" target="_blank" rel="noopener" class="aff-link">
+          <div class="aff-link-icon">🎫</div>
+          <div class="aff-link-info">
+            <div class="aff-link-name">KKday</div>
+            <div class="aff-link-sub">Airport transfers, transport & tours</div>
+          </div>
+          <div class="aff-link-arrow">→</div>
+        </a>
         <a href="https://kiwitaxi.tpo.lu/g1DknrmD" target="_blank" rel="noopener" class="aff-link">
           <div class="aff-link-icon">🚖</div>
           <div class="aff-link-info">
@@ -424,6 +443,28 @@
           <div class="step"><div class="step-num">2</div><div class="step-text"><strong>Park 0.5–1 mile away</strong> instead of in official lots. Less congestion getting out, half the price, 10-minute walk.</div></div>
           <div class="step"><div class="step-num">3</div><div class="step-text"><strong>Leave before the 80th minute</strong> if you need to drive. Staying to the final whistle means 45–90 minutes stuck in lot exit queues.</div></div>
           <div class="step"><div class="step-num">4</div><div class="step-text"><strong>Do not park in residential streets.</strong> Host cities are issuing game-day permit restrictions with heavy fines and towing around all 16 venues.</div></div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-label">Need a hotel near the stadium?</div>
+        <div class="aff-row">
+          <a href="https://klook.tpo.lu/CNWEHngz" target="_blank" rel="noopener" class="aff-link">
+            <div class="aff-link-icon">🏨</div>
+            <div class="aff-link-info">
+              <div class="aff-link-name">Klook Hotels</div>
+              <div class="aff-link-sub">Hotels near all 16 WC venues</div>
+            </div>
+            <div class="aff-link-arrow">→</div>
+          </a>
+          <a href="https://economybookings.tpo.lu/PuoIPt8h" target="_blank" rel="noopener" class="aff-link">
+            <div class="aff-link-icon">🚗</div>
+            <div class="aff-link-info">
+              <div class="aff-link-name">EconomyBookings</div>
+              <div class="aff-link-sub">Car hire — drive between cities</div>
+            </div>
+            <div class="aff-link-arrow">→</div>
+          </a>
         </div>
       </div>
 
@@ -580,8 +621,35 @@
       </div>
 
       <div class="divider"></div>
+      <div class="info-label">Book your hotel</div>
+      <div class="aff-row" style="margin-bottom:8px;">
+        <a href="https://klook.tpo.lu/CNWEHngz" target="_blank" rel="noopener" class="aff-link">
+          <div class="aff-link-icon">🏨</div>
+          <div class="aff-link-info">
+            <div class="aff-link-name">Klook Hotels</div>
+            <div class="aff-link-sub">Hotels near all 16 WC stadiums</div>
+          </div>
+          <div class="aff-link-arrow">→</div>
+        </a>
+        <a href="https://ektatraveling.tpo.lu/nWQWFYAQ" target="_blank" rel="noopener" class="aff-link">
+          <div class="aff-link-icon">🛡️</div>
+          <div class="aff-link-info">
+            <div class="aff-link-name">EKTA Insurance</div>
+            <div class="aff-link-sub">Travel insurance for your trip</div>
+          </div>
+          <div class="aff-link-arrow">→</div>
+        </a>
+      </div>
       <div class="info-label">Plan your experiences</div>
       <div class="aff-row">
+        <a href="https://kkday.tpo.lu/ncnsOoW9" target="_blank" rel="noopener" class="aff-link">
+          <div class="aff-link-icon">🗺️</div>
+          <div class="aff-link-info">
+            <div class="aff-link-name">KKday</div>
+            <div class="aff-link-sub">Tours, sightseeing & experiences</div>
+          </div>
+          <div class="aff-link-arrow">→</div>
+        </a>
         <a href="https://gocity.tpo.lu/j11a4XQZ" target="_blank" rel="noopener" class="aff-link">
           <div class="aff-link-icon">🏛️</div>
           <div class="aff-link-info">
@@ -730,5 +798,38 @@
 
   updateGuide();
 </script>
+<script>
+var MDT={en:{tag:'Live Match Day Guide',h1a:'Your',h1b:'Match Day',h1c:'Playbook',sub:"Everything you need on game day — stadium entrances, getting there without the surge, parking, what's banned, and where to go after the final whistle.",sl:'Select your match',lc:'Host City',lt:'Kickoff time',ld:'Hotel distance',opts:['Walking distance','15–30 min by transit','30–60 min away','Driving / outside city'],s1t:'Stadium Entrances',s1s:'Which gate to use and how to find it fast',s2t:'Getting There',s2s:'Beat surge pricing and traffic without the stress',s3t:'Parking',s3s:'Where to park and how to avoid the post-match gridlock',s4t:'When to Leave Your Hotel',s4s:'Personalised departure time based on your kickoff',s5t:"What to Bring & What's Banned",s5s:"Don't get turned away at the gate",s6t:'After the Match',s6s:'Where to go, what to do, how to get back safely',bt:'Also planning your trip budget?',bs:'WorldCup2026Budget.com — flights, hotels, tickets across all 16 cities',ft:'Match Day Guide for FIFA World Cup 2026 · June 11 – July 19 · USA, Canada, Mexico',fl:'Also try: WorldCup2026Budget.com — full trip cost calculator'},es:{tag:'Guia Dia de Partido en Vivo',h1a:'Tu',h1b:'Manual del',h1c:'Partido',sub:'Todo lo que necesitas el dia del partido — accesos al estadio, como evitar los sobrecaros, estacionamiento, que esta prohibido y donde ir despues.',sl:'Selecciona tu partido',lc:'Ciudad Sede',lt:'Hora del partido',ld:'Distancia al hotel',opts:['A pie','15–30 min en transporte','30–60 min de distancia','En auto / fuera de la ciudad'],s1t:'Accesos al Estadio',s1s:'Cual puerta usar y como encontrarla rapido',s2t:'Como Llegar',s2s:'Evita los sobrecaros y el trafico sin estres',s3t:'Estacionamiento',s3s:'Donde estacionar y como evitar el caos al salir',s4t:'Cuando Salir del Hotel',s4s:'Hora de salida personalizada segun tu partido',s5t:'Que Llevar y Que Esta Prohibido',s5s:'No te rechacen en la entrada',s6t:'Despues del Partido',s6s:'A donde ir, que hacer, como volver sin problemas',bt:'Tambien planificando el presupuesto del viaje?',bs:'WorldCup2026Budget.com — vuelos, hoteles, entradas en las 16 ciudades',ft:'Guia Dia de Partido Copa Mundial FIFA 2026 · 11 Jun – 19 Jul · EE.UU., Canada, Mexico',fl:'Ver tambien: WorldCup2026Budget.com — calculadora de presupuesto de viaje'}};
+var mdLang=localStorage.getItem('wc_lang')||'en';
+function setMdLang(lang){
+  mdLang=lang; localStorage.setItem('wc_lang',lang);
+  var t=MDT[lang];
+  document.getElementById('btn-en').classList.toggle('active',lang==='en');
+  document.getElementById('btn-es').classList.toggle('active',lang==='es');
+  var tag=document.querySelector('.hero-tag'); if(tag) tag.innerHTML='<span></span> '+t.tag;
+  var h1=document.querySelector('.hero h1'); if(h1) h1.innerHTML=t.h1a+'<br><em>'+t.h1b+'</em><br><span class="outline">'+t.h1c+'</span>';
+  var hs=document.querySelector('.hero-sub'); if(hs) hs.textContent=t.sub;
+  var sel=document.querySelector('.selector-label'); if(sel) sel.textContent=t.sl;
+  var sgs=document.querySelectorAll('.sel-group label');
+  if(sgs[0]) sgs[0].textContent=t.lc;
+  if(sgs[1]) sgs[1].textContent=t.lt;
+  if(sgs[2]) sgs[2].textContent=t.ld;
+  var ds=document.getElementById('dist-sel');
+  if(ds) Array.from(ds.options).forEach(function(o,i){if(t.opts[i])o.text=t.opts[i];});
+  var cards=document.querySelectorAll('.section-card');
+  var tk=['s1t','s2t','s3t','s4t','s5t','s6t'];
+  var sk=['s1s','s2s','s3s','s4s','s5s','s6s'];
+  cards.forEach(function(c,i){
+    var title=c.querySelector('.sc-title'); if(title&&tk[i]) title.textContent=t[tk[i]];
+    var sub=c.querySelector('.sc-sub');   if(sub&&sk[i])   sub.textContent=t[sk[i]];
+  });
+  var bt=document.querySelector('.back-title'); if(bt) bt.textContent=t.bt;
+  var bs=document.querySelector('.back-sub');   if(bs) bs.textContent=t.bs;
+  var fp=document.querySelector('footer p'); if(fp) fp.innerHTML=t.ft+'<br><a href="https://worldcup2026budget.com">'+t.fl+'</a>';
+  if(typeof updateGuide==='function') updateGuide();
+}
+document.addEventListener('DOMContentLoaded',function(){setMdLang(mdLang);});
+</script>
+
 </body>
 </html>
