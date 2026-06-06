@@ -922,6 +922,14 @@ function setLang(lang){
   var t=TRANS[lang];
   document.getElementById('btn-en').classList.toggle('active',lang==='en');
   document.getElementById('btn-es').classList.toggle('active',lang==='es');
+  // Track language switch
+  if(typeof rdt !== 'undefined'){
+    rdt('track', 'Lead', {
+      conversionId: 'lang_switch_' + lang + '_' + Date.now(),
+    });
+  }
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({event: 'language_switch', language: lang, page: 'budget_calculator'});
   var ey=document.querySelector('.hero-eyebrow'); if(ey) ey.innerHTML='<i class="ti ti-trophy"></i> '+t.eyebrow;
   var h1=document.querySelector('.hero h1'); if(h1) h1.innerHTML=t.h1a+'<br><span>'+t.h1b+'</span><br>'+t.h1c;
   var subs=document.querySelectorAll('.hero-sub span');
