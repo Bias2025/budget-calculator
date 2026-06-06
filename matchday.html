@@ -239,13 +239,48 @@
 <!-- End Reddit Pixel -->
 
 <script>
-// Reddit Pixel — affiliate click tracking
-document.addEventListener('click', function(e){
-  var a = e.target.closest('a');
-  if(a && a.href && (a.href.includes('tpo.lu') || a.href.includes('tpwdgt') || a.href.includes('fifa.com'))){
-    rdt('track', 'Lead');
+// Reddit Pixel — per-affiliate conversion tracking with deduplication IDs
+(function(){
+  var affiliateMap = {
+    'kiwi.tpo.lu':           {event:'Lead',        id:'kiwi_flight'},
+    'kkday.tpo.lu':           {event:'Lead',        id:'kkday_transport'},
+    'kiwitaxi.tpo.lu':        {event:'Lead',        id:'kiwitaxi_transfer'},
+    'tpo.lu/eonndgLv':        {event:'Lead',        id:'welcomepickups_transfer'},
+    'klook.tpo.lu':           {event:'Lead',        id:'klook_hotel'},
+    'economybookings.tpo.lu': {event:'Lead',        id:'economybookings_car'},
+    'getrentacar.tpo.lu':     {event:'Lead',        id:'getrentacar_car'},
+    'airalo.tpo.lu':          {event:'Lead',        id:'airalo_esim'},
+    'ektatraveling.tpo.lu':   {event:'Lead',        id:'ekta_insurance'},
+    'gocity.tpo.lu':          {event:'Lead',        id:'gocity_experience'},
+    'tpwdgt.com':             {event:'Search',      id:'flight_widget_search'},
+    'fifa.com':               {event:'ViewContent', id:'fifa_tickets'},
+  };
+
+  function genConvId(prefix){
+    return prefix + '_' + Date.now() + '_' + Math.random().toString(36).substr(2,6);
   }
-});
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a || !a.href) return;
+    var href = a.href;
+    for(var key in affiliateMap){
+      if(href.includes(key)){
+        var evt = affiliateMap[key];
+        rdt('track', evt.event, {conversionId: genConvId(evt.id)});
+        console.log('[Reddit Pixel] Tracked:', evt.event, evt.id);
+        break;
+      }
+    }
+  });
+
+  // Track widget interactions (Kiwi + Aviasales)
+  window.addEventListener('message', function(e){
+    if(e.data && typeof e.data === 'string' && e.data.includes('tpwdgt')){
+      rdt('track', 'Search', {conversionId: genConvId('widget_interaction')});
+    }
+  });
+})();
 </script>
 </head>
 <body>
