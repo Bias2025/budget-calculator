@@ -170,6 +170,19 @@
     .widget-section { padding: 1.25rem 1.25rem 0.5rem; border-top: 0.5px solid rgba(255,255,255,0.1); }
     .widget-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
     .widget-wrap { border-radius: 10px; overflow: hidden; }
+
+    /* Merch section */
+    .merch-section { padding: 0.875rem 1.25rem 1rem; border-top: 0.5px solid rgba(255,255,255,0.1); }
+    .merch-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .merch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 7px; }
+    .merch-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 9px 6px; border-radius: var(--radius-md); text-decoration: none; transition: opacity 0.15s; text-align: center; border: none; }
+    .merch-btn:hover { opacity: 0.85; }
+    .merch-btn .m-flag { font-size: 20px; }
+    .merch-btn .m-name { font-size: 11px; font-weight: 600; color: #fff; }
+    .merch-btn .m-sub { font-size: 9px; color: rgba(255,255,255,0.55); margin-top: 1px; }
+    .merch-btn-wide { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 10px; border-radius: var(--radius-md); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #fff; transition: opacity 0.15s; margin-bottom: 6px; }
+    .merch-btn-wide:hover { opacity: 0.85; }
+    .merch-disclosure { font-size: 10px; color: rgba(255,255,255,0.25); text-align: center; margin-top: 4px; }
     .disclosure { font-size: 10px; color: rgba(255,255,255,0.3); text-align: center; padding: 0 1.25rem 1rem; line-height: 1.5; }
     .matchday-link { display: flex; align-items: center; gap: 12px; width: calc(100% - 2.5rem); margin: 0 1.25rem 0.75rem; padding: 12px 14px; background: rgba(240,165,0,0.1); border: 1px solid rgba(240,165,0,0.28); border-radius: var(--radius-md); text-decoration: none; transition: all 0.15s; }
     .matchday-link:hover { background: rgba(240,165,0,0.18); border-color: rgba(240,165,0,0.5); }
@@ -552,6 +565,47 @@ document.addEventListener('click', function(e){
 
       </div>
 
+      <!-- Amazon Merchandise Section -->
+      <div class="merch-section">
+        <div class="merch-label"><i class="ti ti-shirt" style="font-size:11px;"></i> Shop Official Jerseys & Fan Gear</div>
+        <div class="merch-grid">
+          <a href="https://amzn.to/4uZkWJO" target="_blank" rel="noopener" class="merch-btn" style="background:#75AADB;">
+            <span class="m-flag">🇦🇷</span>
+            <span class="m-name">Argentina</span>
+            <span class="m-sub">Shop jerseys</span>
+          </a>
+          <a href="https://amzn.to/49LAcS5" target="_blank" rel="noopener" class="merch-btn" style="background:#009C3B;">
+            <span class="m-flag">🇧🇷</span>
+            <span class="m-name">Brazil</span>
+            <span class="m-sub">Shop jerseys</span>
+          </a>
+          <a href="https://amzn.to/4vAJwRh" target="_blank" rel="noopener" class="merch-btn" style="background:#006847;">
+            <span class="m-flag">🇲🇽</span>
+            <span class="m-name">Mexico</span>
+            <span class="m-sub">Shop jerseys</span>
+          </a>
+          <a href="https://amzn.to/4x7rWFT" target="_blank" rel="noopener" class="merch-btn" style="background:#B22234;">
+            <span class="m-flag">🇺🇸</span>
+            <span class="m-name">USA</span>
+            <span class="m-sub">Shop jerseys</span>
+          </a>
+          <a href="https://amzn.to/3RHZ6vP" target="_blank" rel="noopener" class="merch-btn" style="background:#012169;">
+            <span class="m-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+            <span class="m-name">England</span>
+            <span class="m-sub">Shop jerseys</span>
+          </a>
+          <a href="https://amzn.to/4xeaLT2" target="_blank" rel="noopener" class="merch-btn" style="background:#F0A500;">
+            <span class="m-flag">⚽</span>
+            <span class="m-name">All Teams</span>
+            <span class="m-sub">Fan gear</span>
+          </a>
+        </div>
+        <a href="https://amzn.to/3PLAsK9" target="_blank" rel="noopener" class="merch-btn-wide" style="background:#FF9900;">
+          <i class="ti ti-brand-amazon" style="font-size:16px;"></i> Shop All World Cup 2026 Merch
+        </a>
+        <div class="merch-disclosure">As an Amazon Associate I earn from qualifying purchases.</div>
+      </div>
+
       <button class="share-btn" id="share-btn">
         <i class="ti ti-photo-share"></i> Download My Budget Card
       </button>
@@ -565,6 +619,14 @@ document.addEventListener('click', function(e){
         <span class="md-link-arrow">→</span>
       </a>
 
+      <a href="/gear.html" style="display:flex;align-items:center;gap:12px;width:calc(100% - 2.5rem);margin:0 1.25rem 0.5rem;padding:12px 14px;background:rgba(255,153,0,0.12);border:1px solid rgba(255,153,0,0.3);border-radius:10px;text-decoration:none;transition:all 0.15s;">
+        <span style="font-size:22px;">👕</span>
+        <div style="flex:1;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;color:#FF9900;">Shop Fan Gear & Jerseys</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.45);margin-top:2px;">Argentina · Brazil · Mexico · USA · England & more</div>
+        </div>
+        <span style="font-size:16px;color:#FF9900;">→</span>
+      </a>
       <div class="disclosure">
         Links may earn a commission at no extra cost to you. Prices are estimates only.
       </div>
