@@ -1,0 +1,45 @@
+# FIFA World Cup 2026 — Trip Budget Calculator
+> This site provides detailed tools and information to estimate the costs associated with attending the 2026 FIFA World Cup, including flights, accommodations, tickets, and local expenses across multiple host cities.
+
+The website serves as an interactive calculator and resource hub for fans planning to attend the 2026 FIFA World Cup in the USA, Canada, and Mexico. It offers customizable trip planning tools, travel options, ticket information, and recommendations for accommodations, transport, and experiences. The content helps users understand potential costs and plan accordingly, making it valuable for both casual fans and serious attendees.
+
+## Core Content
+- [What Will Your World Cup Cost?](https://worldcup2026budget.com)  
+  Main landing page that introduces the trip budgeting tool and overview of the event.
+- [Travel Planning and Costs](https://worldcup2026budget.com#Travel)  
+  Details on flights, transportation options, and booking links with specific providers like Kiwi.com, Aviasales, and Kiwitaxi.
+- [Accommodation Options](https://worldcup2026budget.com#Accommodation)  
+  Budget, mid-range, and luxury hotel suggestions across host cities, with booking links.
+- [Ticket Purchasing & Rounds](https://worldcup2026budget.com#Tickets)  
+  Official ticket purchase link and overview of ticket categories for different tournament stages.
+- [Host Cities and Venues](https://worldcup2026budget.com#HostCities)  
+  List of the 16 host cities in the USA, Canada, and Mexico, with specific stadiums listed for each.
+- [Experiences and Tours](https://worldcup2026budget.com#Experiences)  
+  Options for city tours, attraction passes, and related fan experiences.
+
+## Resources
+- [Official Tickets — FIFA.com](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/tickets)  
+  Link to purchase official tournament tickets.
+- [Search Flights — Kiwi.com](https://kiwi.tpo.lu/1qObLoeP)  
+- [Search Flights — Aviasales](https://aviasales.tpo.lu/xrQAYPN1)  
+  Flight search tools for planning transportation to event cities.
+- [Hotels & Accommodation — Klook](https://klook.tpo.lu/CNWEHngz)  
+  Booking platform for hotels across the host cities.
+- [Ground Transport — Kiwitaxi](https://kiwitaxi.tpo.lu/g1DknrmD), [Welcome Pickups](https://tpo.lu/eonndgLv), [GetRentacar](https://getrentacar.tpo.lu/WaQ5J3Ae)  
+  Local transportation options with discount codes.
+- [Tour & Attraction Bookings — KKday](https://kkday.tpo.lu/ncnsOoW9), [Go City](https://gocity.tpo.lu/j11a4XQZ)  
+  City tours and attraction passes.
+- [Official Fan Jerseys & Gear — FansJerseyHub](https://www.awin1.com/cread.php?awinmid=126139&awinaffid=2924321&ued=https%3A%2F%2Ffansjerseyshub.com%2Fcollections%2Fall), [Amazon England Jerseys](https://amzn.to/3RHZ6vP)  
+  Stores for official merchandise.
+
+## Optional
+- [Travel Insurance — EKTA](https://ektatraveling.tpo.lu/nWQWFYAQ)  
+  Insurance options for travelers.
+- [Match Day Guide](https://worldcup2026budget.com/matchday.html)  
+  Post-arrival info on stadium gates, transport, banned items, and post-match activities.
+- [Fan Gear & Jerseys](https://worldcup2026budget.com/gear.html)  
+  Shop for team jerseys and fan apparel across all 48 nations.
+- [World Cup 2026 Blog](https://worldcup2026budget.com/blog.html)  
+  Travel tips, city guides and fan resources for the tournament.
+- [Download My Budget Card](https://worldcup2026budget.com/budget-card)  
+  A shareable summary card of estimated trip costs.
