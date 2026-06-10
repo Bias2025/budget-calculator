@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Core pages
+Allow: /index.html
+Allow: /matchday.html
+Allow: /gear.html
+Allow: /blog.html
+Allow: /llms.txt
+
+# Sitemap
+Sitemap: https://worldcup2026budget.com/sitemap.xml
+
+# Block API endpoints from indexing
+Disallow: /api/
